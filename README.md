@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alden
 
-## Getting Started
+App demo de servicios para el hogar en Rosario (Next.js 14, App Router, TypeScript, Tailwind). PWA instalable con datos ficticios en `src/lib/data.ts`.
 
-First, run the development server:
+## Pantallas
+
+- `/` — Bienvenida y registro simulado (cliente / operador)
+- `/cliente` — Mapa con operadores y listado
+- `/operador/[id]` — Perfil, reseñas y solicitud de servicio
+- `/pago` — Resumen y pago simulado Mercado Pago
+- `/seguimiento` — Estados automáticos y calificación
+- `/operador` — Panel del operador (pedidos y ganancias)
+- `/admin` — Panel de administración (escritorio)
+
+## Desarrollo
 
 ```bash
+npm install
+npm run icons
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000). Probá ancho **390px** en DevTools para mobile.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## PWA
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Manifest: `public/manifest.webmanifest`
+- Íconos: `public/icons/` (`npm run icons`)
 
-## Learn More
+## Deploy en Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Subí el repo a GitHub o conectá la carpeta en [vercel.com](https://vercel.com).
+2. Framework preset: **Next.js** (detectado automáticamente).
+3. Build command: `npm run build` · Output: default.
+4. No requiere variables de entorno para la demo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Alternativa CLI:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npx vercel
+```
 
-## Deploy on Vercel
+## Paleta
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Principal: `#3730A3`
+- Acento: `#F97316`
+- Fondo: `#F8FAFC`

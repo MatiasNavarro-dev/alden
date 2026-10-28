@@ -9,8 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        alden: {
+          primary: "#3730A3",
+          accent: "#F97316",
+          bg: "#F8FAFC",
+        },
+        mp: "#009EE3",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        card: "1rem",
       },
     },
   },
